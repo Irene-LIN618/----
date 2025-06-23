@@ -1,0 +1,36 @@
+@import url("reset.css");
+
+:root{
+
+    /*----文字字形----*/
+    --font_family_primary:Inria Serif;
+    --font_family_article: Great Vibes;
+    --font_family_footer:Bree Serif;
+
+    /*----字體寬度----*/
+    --font_weight_regular:normal;
+    --font_weight_blod:bold;
+
+    /*----文字大小-----*/
+    --h1:3.5rem;/*56*/
+    --h2:3rem;/*48px*/
+    --h3:2.5rem;/*40px*/
+    --h4:2rem;/*32px*/
+    --h5:1.5rem;/*24px*/
+    --h6:1rem;/*16px*/
+    --p:1rem;
+    
+
+    /*---color----*/
+    --botton_background_color:#E2C4AA;
+    --botton_text_color:white;
+    --text_login_color:#B55C25;
+    --section_background_color:#E2D9CB;
+    --footer_text_color:#5B3C1D;
+    --footer_buttontext_color:#A66B5A;
+
+    /*----行高-----*/
+
+    --line-height_text: 1.6;
+    --line-height_title:1.4;
+}

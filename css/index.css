@@ -1,0 +1,497 @@
+@import url("reset.css");
+
+body{
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inria Serif", serif;
+
+}
+
+
+.wrapper{
+    /* outline: 1px solid red; */
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: rgb(225, 225, 225,0.6);
+    position: relative;
+}
+
+/*-----------------主視覺-------------------*/
+header{
+    /* border: 1px solid blue; */
+    background-image: url("../img/index_main_bg.png");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+/*---------首頁title----------*/
+.index_top{
+    /* outline: 1px solid green; */
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: rgba(225, 225, 225, 0.15); */
+    
+    display: flex;
+    justify-content: center;
+    gap: 132px;
+    box-sizing: border-box;
+    padding:0 20px 0 20px;
+
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; */
+}
+/*---------logo----------*/
+.index_top img{
+    /* outline: 1px solid pink; */
+    width: 120px;
+    height: 120px;
+
+    display: block;
+    box-sizing: border-box;
+    margin-left: 20px;
+
+}
+/*---------導覽欄----------*/
+header nav{
+    /* outline: 1px solid pink; */
+    width: 898px;
+    text-align: center;
+
+    align-content: center;
+}
+
+header ul{   
+    display: flex;
+}
+
+header li{
+    /* border: 1px solid yellow; */
+    flex-basis: 0;
+    flex-grow: 1;
+} 
+
+nav a{
+    /* outline: 1px solid red; */
+    line-height: 1.4;
+    color: var(--botton_text_color);
+    font-size: var(--h5); 
+
+    text-decoration: none;
+    text-shadow: 0 0 5px black;
+    
+}
+/*---------會員登入按鈕----------*/
+header li:last-child a{
+    display: block;
+    background-color: var(--text_login_color);
+    box-sizing: border-box;
+    border-radius: 16px;
+    /* box-sizing: border-box;
+    padding: 5px 2px ; */
+   
+
+    transition: 0.3s ease;
+    transform: scale(0.7);
+    text-shadow: none;
+}
+
+header li:last-child:hover a{
+    transform: scale(1);
+}
+
+header > img{
+    display: block;
+    width: 463px;
+    flex-grow: 1 ;
+    margin-left: 16%;
+    margin-bottom: 6%;
+
+    animation-name: flow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flow {
+    0%{transform:translateY(20px) ;
+        opacity: 0;
+    }
+
+    50%{
+
+    }
+    100%{transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+/*-----------------首頁內容區塊-------------------*/
+
+/*-----------introduct-------------*/
+
+.introduct{
+    /* outline: 1px solid greenyellow; */
+    
+    width: 100%;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+
+}
+.introduct img{
+    /* outline: 1px solid red; */
+    display: block;
+    width: 480px;
+    height: 600px;
+}
+
+.introduct_text{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 400px;
+}
+
+
+.introduct_text h2{
+    /* outline: 3px solid gold; */
+    font-size: var(--h2);
+    font-weight: var(--font_weight_blod);
+    color: var(--text_login_color);
+    text-align: left;
+}
+
+.introduct_text p{
+    /* outline: 1px solid black; */
+    font-size: var(--h5);
+    color: var(--text_login_color);
+    line-height: var(--line-height_text);
+    text-align: left;
+    width: 400px;
+    margin-top: 94px;
+
+}
+
+
+/*-------------our class-------------*/
+.our_class{
+    width: 100%;
+}
+
+.our_class img{
+    display: block;
+    width: 280px;
+    height: 320px;
+}
+
+.our_class h2{
+    font-size: var(--h2);
+    color: var(--text_login_color);
+    font-weight: var(--font-weight_blod);
+    line-height: var(--line-height_title);
+    text-align: center;
+}
+
+.our_class ul{
+    /* outline: 1px solid salmon; */
+    height: 705px;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+}
+
+.our_class li{
+    width: 320px;
+    height: 100%;
+    /* background-color: bisque; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    position: relative;
+}
+
+.our_class img{
+    width: 280px;
+    height: 320px;
+    object-position: center center;
+    
+}
+
+.our_class h4{
+    display: block;
+    width: 100%;
+    margin: 24px 0;
+
+    color: var(--text_login_color);
+    font-size: var(--h4);
+    text-align: center;
+}
+
+.our_class p{
+    color: var(--normal);
+    line-height: var(--line-height_text);
+    letter-spacing: 1px;
+}
+
+.our_class a{
+    display: block;
+    width: 60px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+
+    background-color: var(--botton_background_color);
+    font-size: var(--h5);
+    color: var(--botton_text_color);
+    text-align: center;
+    text-decoration: none;
+}
+
+.our_class a:hover{
+    transform-origin: right bottom;
+    transform: scale(1.2);
+    transition: 0.1 ease;
+}
+ 
+
+/*--------------空間圖----------------*/
+.middle_pic{
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+
+}
+/*--------------探索之旅----------------*/
+/*--journey-same*/
+.journey{
+    /* outline: 1px solid rebeccapurple; */
+    width: 100%;
+    margin: 20px auto 50px;
+}
+
+.journey_content{
+    /* outline: 3px solid blue; */
+}
+
+.journey h3{
+    color: var(--text_login_color);
+    font-size: var(--h3);
+    font-weight: var(--font-weight_blod);
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.journey h4{
+    font-size: var(--h4);
+    color: var(--text_login_color);
+    line-height: var(--line-height_title);
+
+    z-index: 10;
+}
+
+.journey p{
+    /* color: ; */
+    font-size: var(--text);
+    line-height: var(--line-height_text);
+    text-align: center;
+    padding: 0 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 10;
+
+
+}
+
+.journey a{
+    display: block;
+  
+    width: 132px;
+    margin-top: auto;
+
+    z-index: 10;
+    position: relative;
+    text-decoration: none;
+
+    
+}
+
+
+.journey a span{
+    width: 100%;
+    display: block;
+  border-radius: 10px;
+    background-color: var(--botton_background_color);
+    color: var(--botton_text_color);
+    font-size: var(--h5);
+    font-weight: var(--font-weight_blod);
+    letter-spacing: 1px;
+    line-height: var(--line-height_text);
+    text-align: center;
+}
+
+.journey a:hover span{
+    animation-name: hit;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes hit {
+    0%{
+        opacity: 0;
+        transform: scale(0)
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+}
+
+
+.journey_content img{
+    width: 400px;
+    height: 480px;
+
+    z-index: 10;
+}
+
+.begin,.build,.challenge,.coach{
+    /* outline: 1px solid goldenrod; */
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.begin_text,.build_text,.challenge_text,.coach_text{
+    /* outline: 2px solid plum; */
+    width: 360px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+/*--------------journey-seperate----------------*/
+.begin,.challenge{
+    position: relative;
+    z-index: 10;
+    transform: translateY(100PX);
+}
+
+.build,.coach{
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.build::before,.coach::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--section_background_color); */
+    background-color: bisque;
+
+    position: absolute;
+    z-index: 0;
+    top: 50px;
+}
+
+.begin_text,.challenge_text{
+
+}
+
+.build_text,.coach_text{
+    align-self: end;
+}
+
+.begin h4,.challenge h4{
+    position: relative;
+
+}
+
+.begin h4::before,.challenge h4::before,.build h4::after,.coach h4::after{
+    content: '';
+    display: inline-block;
+    width: 5px ;
+    height: 28px;
+    background-color: var(--botton_background_color);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    margin: auto;
+}
+
+.build h4,.coach h4{
+    align-self: end;
+    position: relative;
+}
+
+
+.begin a,.challenge a{
+    align-self: end;
+}
+
+.build a,.coach a{
+
+}
+
+/*-----------------免費體驗-------------------*/
+.buttn{
+    position: relative;
+    position: absolute;
+}
+
+.button a{
+    display: block;
+    background-color: var(--botton_background_color);
+    color: var(--botton_text_color);
+    font-size: var(--h5);
+    font-weight: var(--font-weight_blod);
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    
+    width: 40px;
+    box-sizing: border-box;
+    padding: 10px 2px;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+}
+
+.button:hover a{
+    animation-name: free;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: initial;
+}
+@keyframes free {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

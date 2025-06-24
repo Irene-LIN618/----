@@ -14,7 +14,7 @@ body{
     width: 100%;
     margin: 0 auto;
 
-    background-color: rgb(225, 225, 225,0.6);
+    background-color: var(--botton_text_color);
     position: relative;
 }
 
@@ -159,7 +159,7 @@ header > img{
 .introduct_text{
     box-sizing: border-box;
     padding: 10px;
-    width: 400px;
+    width: 480px;
 }
 
 
@@ -174,11 +174,12 @@ header > img{
 .introduct_text p{
     /* outline: 1px solid black; */
     font-size: var(--h5);
-    color: var(--text_login_color);
+    color: var(--text_color);
     line-height: var(--line-height_text);
     text-align: left;
     width: 400px;
     margin-top: 94px;
+    text-shadow: #fff 2 2 2 0.2 ;
 
 }
 
@@ -186,6 +187,7 @@ header > img{
 /*-------------our class-------------*/
 .our_class{
     width: 100%;
+    transform: scale(0.8);
 }
 
 .our_class img{
@@ -197,7 +199,7 @@ header > img{
 .our_class h2{
     font-size: var(--h2);
     color: var(--text_login_color);
-    font-weight: var(--font-weight_blod);
+    font-weight: var(--font_weight_blod);
     line-height: var(--line-height_title);
     text-align: center;
 }
@@ -384,7 +386,7 @@ header > img{
 .begin_text,.build_text,.challenge_text,.coach_text{
     /* outline: 2px solid plum; */
     width: 360px;
-    height: 320px;
+    height: 360px;
     display: flex;
     flex-direction: column;
     z-index: 5;
@@ -432,7 +434,7 @@ header > img{
     display: inline-block;
     width: 5px ;
     height: 28px;
-    background-color: var(--botton_background_color);
+    background-color: #C9AC9A;
 
     position: absolute;
     top: 0;
@@ -455,43 +457,3 @@ header > img{
 
 }
 
-/*-----------------免費體驗-------------------*/
-.buttn{
-    position: relative;
-    position: absolute;
-}
-
-.button a{
-    display: block;
-    background-color: var(--botton_background_color);
-    color: var(--botton_text_color);
-    font-size: var(--h5);
-    font-weight: var(--font-weight_blod);
-    border-bottom-left-radius: 12px;
-    border-top-left-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    
-    width: 40px;
-    box-sizing: border-box;
-    padding: 10px 2px;
-    position: fixed;
-    bottom: 50px;
-    right: 0;
-}
-
-.button:hover a{
-    animation-name: free;
-    animation-duration: .5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: initial;
-}
-@keyframes free {
-    0%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}

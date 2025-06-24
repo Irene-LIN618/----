@@ -10,15 +10,15 @@ footer{
     
 }
 
-.img{}
+footer.img{}
 
-h5{
+footer h5{
     font-weight:var(--font_weight_blod);
     margin: 10px 0;
     position: relative;
 }
 
-h5::before{
+footer h5::before{
     content: '';
     display: block;
     width: 1000px;
@@ -32,11 +32,11 @@ h5::before{
     margin: auto;
 }
 
-ul+p{
+footer ul+p{
     color: var(--footer_buttontext_color);
 }
 
-ul{
+.footer_list{
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -44,8 +44,48 @@ ul{
     padding: 10px 0;
 }
 
-li{
+footer li{
     display: block;
     width: 36px;
     height: 36px;
 }
+/*-----------------免費體驗-------------------*/
+
+.buttn{
+    position: relative;
+    position: absolute;
+}
+
+.button a{
+    display: block;
+    background-color: var(--botton_background_color);
+    color: var(--botton_text_color);
+    font-size: var(--h5);
+    font-weight: var(--font-weight_blod);
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    
+    width: 40px;
+    box-sizing: border-box;
+    padding: 10px 2px;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+}
+
+.button:hover a{
+    animation-name: free;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: initial;
+}
+@keyframes free {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }

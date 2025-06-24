@@ -1,0 +1,105 @@
+body{
+    font-family: "Inria Serif", serif,sans-serif;
+    
+}
+
+
+.wrapper{
+    /* outline: 1px solid red; */
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+/*-----------------主視覺-------------------*/
+header{
+    /* border: 1px solid blue; */
+    width: 100%;
+    background-color: var(--botton_background_color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+
+}
+/*---------首頁title----------*/
+.index_top{
+    /* outline: 1px solid green; */
+    width: 1200px;
+    margin: 0 auto;
+    /* background-color: rgba(225, 225, 225, 0.15); */
+    /* background-color: var(--botton_background_color); */
+    
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding:0 20px 0 20px;
+
+    gap: 100px;
+    
+}
+/*---------logo----------*/
+.index_top img{
+    /* outline: 1px solid pink; */
+    
+    color: var(--botton_text_color);
+
+    display: block;
+    box-sizing: border-box;
+    margin-left: 20px;
+
+    transform: scale(0.7);
+
+}
+/*---------導覽欄----------*/
+header nav{
+    /* outline: 1px solid pink; */
+    width: 898px;
+    text-align: center;
+
+    align-content: center;
+}
+
+header ul{   
+    display: flex;
+}
+
+header li{
+    /* border: 1px solid yellow; */
+    flex-basis: 0;
+    flex-grow: 1;
+} 
+
+nav a{
+    /* outline: 1px solid red; */
+    line-height: 1.4;
+    color: var(--botton_text_color);
+    font-size: var(--h5); 
+
+    text-decoration: none;
+    
+    
+}
+/*---------會員登入按鈕----------*/
+header li:last-child a{
+    display: block;
+    background-color: var(--text_login_color);
+    box-sizing: border-box;
+    border-radius: 16px;
+    /* box-sizing: border-box;
+    padding: 5px 2px ; */
+   
+
+    transition: 0.3s ease;
+    transform: scale(0.7);
+    text-shadow: none;
+}
+
+header li:last-child:hover a{
+    transform: scale(1);
+}

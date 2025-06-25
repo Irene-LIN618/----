@@ -84,9 +84,17 @@ nav a{
     color: var(--botton_text_color);
     font-size: var(--h5); 
 
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 0;
+    
     text-decoration: none;
     text-shadow: 0 0 5px black;
     
+}
+
+nav a:hover{
+    border-bottom: 1px solid white;
 }
 /*---------會員登入按鈕----------*/
 header li:last-child a{
@@ -187,7 +195,8 @@ header > img{
 /*-------------our class-------------*/
 .our_class{
     width: 100%;
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
+    background-color: #e3d0be4c;
 }
 
 .our_class img{
@@ -200,17 +209,19 @@ header > img{
     font-size: var(--h2);
     color: var(--text_login_color);
     font-weight: var(--font_weight_blod);
-    line-height: var(--line-height_title);
+    line-height: 120px;
     text-align: center;
+    height: 120px;
 }
 
 .our_class ul{
     /* outline: 1px solid salmon; */
-    height: 705px;
-    padding: 24px 0;
+    height: 640px;
+    padding: 24px 0 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: scale(0.8);
 
     gap: 40px;
 }
@@ -218,17 +229,18 @@ header > img{
 .our_class li{
     width: 320px;
     height: 100%;
-    /* background-color: bisque; */
     background-color: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-sizing: border-box;
-    padding: 20px;
+    /* padding: 20px; */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px black;
 
     position: relative;
 }
 
 .our_class img{
-    width: 280px;
+    width: 320px;
     height: 320px;
     object-position: center center;
     
@@ -310,11 +322,11 @@ header > img{
 }
 
 .journey p{
-    /* color: ; */
+    color: var(--text_color) ;
     font-size: var(--text);
     line-height: var(--line-height_text);
-    text-align: center;
-    padding: 0 50px;
+    text-align: left;
+    padding: 0 48px;
     margin-top: auto;
     margin-bottom: auto;
     z-index: 10;
@@ -409,7 +421,7 @@ header > img{
     width: 100%;
     height: 100%;
     /* background-color: var(--section_background_color); */
-    background-color: bisque;
+    background-color: #FFF7EC;
 
     position: absolute;
     z-index: 0;

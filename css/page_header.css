@@ -81,9 +81,16 @@ nav a{
     color: var(--botton_text_color);
     font-size: var(--h5); 
 
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 0;
+
     text-decoration: none;
     
-    
+}
+
+nav a:hover{
+    border-bottom: 1px solid white;
 }
 /*---------會員登入按鈕----------*/
 header li:last-child a{

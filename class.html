@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina|課程專區</title>
+    <link rel="shortcut icon" href="img/color_logo.svg" type="image/x-icon"><!-- 徽標 -->
+    <!-- Google Fonts (一次引多種字型) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN (全包) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/class.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/page_header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <div class="wrapper">
+         <!------------------- 導航欄 ----------------------->
+        <header>
+                <div class="index_top">
+                <a href="index.html"><img src="img/logo-text.png" alt=""></a>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="new_blog.html">消息總覽</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
+                            <li><a href="class.html">課程專區</a></li>
+                            <li><a href="about.html">關於我們</a></li>
+                            <li><a href="question.html">常見問題</a></li>
+                            <li><a href="joinus.html">會員登入</a></li>
+                        </ul>
+                    </nav>
+                    <button class="menu" ><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </header><!-- logo -->
+            <img src="" class="contact_view">
+        <!------------------- 課程區 ----------------------->
+        <main>
+            <!-- 側邊選單 -->
+            <aside>
+                <!-- 搜尋欄 -->
+                <div class="search">
+                    <input type="text" placeholder="搜尋課程...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <!-- 課程分類 -->
+                <div class="class_group">
+                    <button><span>課程分類</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <ul>
+                        <li><a href="#"><i></i>瑜伽</a></li>
+                        <li><a href="#"><i></i>重訓</a></li>
+                        <li><a href="#"><i></i>有氧</a></li>
+                        <li><a href="#"><i></i>皮拉提斯</a></li>
+                        <li><a href="#"><i></i>class 5</a></li>
+                    </ul>
+                </div>
+                <!-- 難度等級 -->
+                <div class="level">
+                    <button><span>難度等級</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <ol>
+                        <li><input type="checkbox" name="level" id=""><span>初學者</span></li>
+                        <li><input type="checkbox" name="level" id=""><span>中級</span></li>
+                        <li><input type="checkbox" name="level" id=""><span>進階</span></li>
+                    </ol>
+                </div>
+                <!-- 課程時長 -->
+                <div class="howlong">
+                    <button><span>課程時長</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <ul>
+                        <li><input type="checkbox" name="spend" id=""><span>30分鐘一下</span></li>
+                        <li><input type="checkbox" name="spend" id=""><span>30-60分鐘</span></li>
+                        <li><input type="checkbox" name="spend" id=""><span>60分鐘以上</span></li>
+                    </ul>
+                </div>
+
+                <button>套用篩選</button>
+            </aside>
+            <!-- 名稱-排序 -->
+            <section>
+                <div class="above">
+                    <h3>全部課程</h3>
+                    <div class="oreder">
+                        <label for="order_box">排序:</label>
+                        <select name="order_box" id="order_box">
+                            <option value="">熱門程度</option>
+                            <option value="">最新上架</option>
+                            <option value="">價格:低至高</option>
+                            <option value="">價格:高至低</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="down">
+                    <ul>
+                        <li>
+                            <div class="card">
+                                <img src="img/class_pic1.png" alt="">
+                                <p><span class="class_level">初學者適合</span><span class="class_time">60分鐘</span></p>
+                                <h4>舒緩伸展瑜伽</h4>
+                                <span class="classcard_statment">適合初學者的緩和課程，專注於正確姿勢和深度伸展，釋放壓力。</span>
+                                <div class="card_btn">
+                                    <!-- <i><img src="" alt=""></i> -->
+                                    <span>林教練</span>
+                                    <button class="reserve">預約</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="img/class_pic2.png" alt="">
+                                <p><span class="class_level">中級</span><span class="class_time">45分鐘</span></p>
+                                <h4>核心力量皮拉提斯</h4>
+                                <span class="classcard_statment">強化核心肌群，改善姿勢，增加身體穩定性和靈活度。</span>
+                                <div class="card_btn">
+                                    <!-- <i><img src="" alt=""></i> -->
+                                    <span>王教練</span>
+                                    <button class="reserve">預約</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="img/class_pic3.png" alt="">
+                                <p><span class="class_level">中級</span><span class="class_time">55分鐘</span></p>
+                                <h4>女性專屬重訓</h4>
+                                <span class="classcard_statment">專為女性設計的重量訓練，塑造勻稱肌肉線條，不會過度增肌。</span>
+                                <div class="card_btn">
+                                    <!-- <i><img src="" alt=""></i> -->
+                                    <span>李教練</span>
+                                    <button class="reserve">預約</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <img src="img/class_pic4.png" alt="">
+                                <p><span class="class_level">所有程度</span><span class="class_time">50分鐘</span></p>
+                                <h4>拉丁舞有氧</h4>
+                                <span class="classcard_statment">充滿活力的拉丁舞步，燃燒卡路里的同時享受音樂與舞蹈的樂趣。</span>
+                                <div class="card_btn">
+                                    <!-- <i><img src="" alt=""></i> -->
+                                    <span>陳教練</span>
+                                    <button class="reserve">預約</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <button class="courseschedule" ><i class="fa-regular fa-calendar"></i></button>
+         <div class="pagination">
+             <ul>
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">&gt;</a></li>
+            </ul>
+        </div>
+        <!-----------------footer-------------------------->
+        <footer>
+            <img src="img/text-logo.svg" alt="">
+            <h5>Your Journey to Luminous Starts Here</h5>
+            <p>phone:+123456789<br>address:No.321,Section1,inan Road,Zhongzheng District,Taipei City 100<br>open at 8:am -9:30pm</p>
+            <ul class="footer_list">
+                <li><img src="img/footer_facebook.svg" alt=""></li>
+                <li><img src="img/footer_Instagram.svg" alt=""></li>
+                <li><img src="img/footer_Twitter.svg" alt=""></li>
+                <li><img src="img/footer_Mail.svg" alt=""></li>
+            </ul>
+            <p>@2025 lumina 健身空間｜點亮妳的光</p>
+        </footer>
+    </div>
+    <Script src="JS/header_nav.js"></Script>
+</body>
+</html>

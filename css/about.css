@@ -1,7 +1,6 @@
 @import url('reset.css');
 
 
-body{}
 
 .wrapper{
 }
@@ -171,6 +170,7 @@ main h4{
     background-color: rgb(255, 255, 255,0.4);
 }
 
+
 /*--------------空間導覽---------------*/
 
 .sec4{
@@ -277,3 +277,30 @@ main h4{
     z-index: 20;
 
 } */
+
+/*---------回到頂部----------*/
+
+#backtotop{
+    display: none;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    background-color: var(--color6);
+
+    cursor: pointer;
+
+    position: fixed;
+    right: 6vw;
+    bottom: 4vh;
+    z-index: 999;
+}
+#backtotop:hover{
+    transform: translateY(-2px);
+    transition: 0.1s ease;
+    background-color: #7c9475ee;
+}
+
+.fa-arrow-up{
+    color: #fff;
+    font-size: 24px;
+}

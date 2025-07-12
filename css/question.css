@@ -1,0 +1,101 @@
+@import url(reset.css);
+
+main{
+    margin: 84px 0;
+}
+
+.QA{
+    max-width: 1200px;
+    padding: 40px  clamp(96px,16.7vw,240px);/*240/1440=*/
+    margin: 0 auto;
+}
+
+
+.QA h3{
+    text-align: center;
+    font-size: var(--h2_sec_title);
+    color: var(--text_login_color);
+    line-height: var(--line-height_small);
+    font-weight: var(--font_weight_blod);
+    padding: 20px 0 60px;
+
+}
+
+.questionlist{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    
+    
+}
+
+.questionlist li{
+    /* border: 1px solid brown; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.question{
+    /* border: 1px solid green; */
+    border: none;
+    background-color: #fff;
+    border-bottom: 2px solid var(--color5);
+   
+    padding: 0 0 10px 2px;
+
+    font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
+    font-size: var(--h1_nav);
+    color: var(--color3);
+    line-height: var(--line-height_small);
+    text-align: left;
+
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/*為了更穩固而加*/
+    
+}
+
+.question:hover{
+    color: var(--text_login_color);
+    font-weight: var(--font_weight_blod);
+    transition: 0.3s;
+}
+
+span{
+    font-weight: var(--font_weight_blod);
+    font-size: 36px;
+    padding: 10px;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    margin: 20px 30px;
+    border-radius: 10px;
+    
+    font-size: var(--h6_btn);
+    font-weight: var(--font_weight_blod);
+    color: var(--text_color);
+    line-height: var(--line-height_big);
+    letter-spacing: 0.5px;
+
+    transition: max-height 0.3s ease;
+}
+
+/*----JS執行-----*/
+.question_active{
+    color: var(--color3);
+    font-weight: var(--font_weight_blod);
+}
+
+/*---------- 螢幕小於 430 時 ----------*/
+@media screen and (max-width: 431px){
+    .QA{
+        padding: 20px  20px;
+    }
+
+}
+ 

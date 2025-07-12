@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .accordion-header {
+  cursor: pointer;
+  padding: 10px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fafafa;
+  padding: 0 10px;
+}
+
+.accordion-content p {
+  margin: 10px 0;
+}
+.accordion-header .icon {
+  display: inline-block;
+  width: 20px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="accordion">
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span class="icon">➕</span>
+      標題 1
+    </div>
+    <div class="accordion-content">
+      <p>這是內容 1</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span class="icon">➕</span>
+      標題 2
+    </div>
+    <div class="accordion-content">
+      <p>這是內容 2</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span class="icon">➕</span>
+      標題 3
+    </div>
+    <div class="accordion-content">
+      <p>這是內容 3</p>
+    </div>
+  </div>
+</div>
+
+  <script>
+    const headers = document.querySelectorAll(".accordion-header");
+
+headers.forEach(header => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector(".icon");
+
+    // 折疊其他內容並重設 icon
+    document.querySelectorAll(".accordion-content").forEach(c => {
+      if (c !== content) {
+        c.style.maxHeight = null;
+        c.previousElementSibling.querySelector(".icon").textContent = "➕";
+      }
+    });
+
+    // 切換當前
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      icon.textContent = "➕";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      icon.textContent = "➖";
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

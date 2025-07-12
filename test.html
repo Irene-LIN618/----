@@ -1,0 +1,1023 @@
+
+<!-- <!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>頁面切換範例</title>
+  <style>
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .tabs button.active {
+      background-color: #007BFF;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  Tab 按鈕
+   <div class="tabs">
+    <button class="tab-btn active" data-target="page1">頁面 1</button>
+    <button class="tab-btn" data-target="page2">頁面 2</button>
+    <button class="tab-btn" data-target="page3">頁面 3</button>
+  </div> -->
+
+   <!-- Tab 內容  -->
+  <!-- <div id="page1" class="tab-content active">
+    <h2>這是頁面 1</h2>
+    <p>頁面 1 的內容。</p>
+  </div>
+
+  <div id="page2" class="tab-content">
+    <h2>這是頁面 2</h2>
+    <p>頁面 2 的內容。</p>
+  </div>
+
+  <div id="page3" class="tab-content">
+    <h2>這是頁面 3</h2>
+    <p>頁面 3 的內容。</p>
+  </div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const pages = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 移除所有按鈕的 active
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // 隱藏所有頁面
+        pages.forEach(page => page.classList.remove('active'));
+
+        // 顯示對應頁面
+        const targetId = btn.dataset.target;
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  </script> -->
+
+ <!-- </body>
+</html>  -->
+
+<!-- 會員登入 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>會員登入 / 註冊</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  :root {
+  --primary: #B55C25;
+  --background: #F8F5F2;
+  --border: #E2C4AA;
+  --divider: #EAD9C9;
+  --text-dark: #4A3B2D;
+  --text-gray: #A79382;
+  --hover: #C08F52;
+  --btn-bg: #B55C25;
+  --social-bg: #EAD9C9;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+}
+
+.login-page {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.tab-group {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: 30px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: var(--text-gray);
+  cursor: pointer;
+}
+
+.tab.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  font-weight: bold;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.options a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.btn-login {
+  width: 100%;
+  background: var(--btn-bg);
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: var(--hover);
+}
+
+.divider {
+  text-align: center;
+  margin: 25px 0;
+  position: relative;
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--divider);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  border: none;
+  height: 45px;
+  border-radius: 8px;
+  background: var(--social-bg);
+  color: var(--text-dark);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-btn i {
+  font-size: 20px;
+}
+ 
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.password-strength {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.form-group.agreement {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.form-group.agreement a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.form-group.agreement input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.password-strength span {
+  font-weight: bold;
+}
+
+.password-strength .weak {
+  color: #B55C25;
+}
+
+.password-strength .medium {
+  color: #C08F52;
+}
+
+.password-strength .strong {
+  color: #A7B8A2;
+}
+
+:root {
+  --primary: #B55C25;
+  --background: #F8F5F2;
+  --border: #E2C4AA;
+  --divider: #EAD9C9;
+  --text-dark: #4A3B2D;
+  --text-gray: #A79382;
+  --hover: #C08F52;
+  --btn-bg: #B55C25;
+  --social-bg: #EAD9C9;
+
+  /* 密碼強度顏色 */
+  --strength-weak: #B55C25;
+  --strength-medium: #C08F52;
+  --strength-strong: #A7B8A2;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.password-strength {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.password-strength span {
+  font-weight: bold;
+}
+
+.password-strength .weak {
+  color: var(--strength-weak);
+}
+
+.password-strength .medium {
+  color: var(--strength-medium);
+}
+
+.password-strength .strong {
+  color: var(--strength-strong);
+}
+
+.strength-bar {
+  margin-top: 5px;
+  height: 5px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-bar div {
+  height: 100%;
+  width: 0%;
+  background: var(--strength-weak);
+  transition: width 0.3s, background 0.3s;
+}
+
+.form-group.agreement {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.form-group.agreement a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.form-group.agreement input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary);
+}
+
+.btn-login {
+  width: 100%;
+  background: var(--btn-bg);
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: var(--hover);
+}
+
+
+  </style> 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      const target = tab.dataset.tab;
+      document.getElementById(target).classList.add("active");
+    });
+  });
+
+  // 密碼強度
+  const pwdInput = document.getElementById("new-password");
+  const strengthText = document.getElementById("strength-text");
+
+  if (pwdInput) {
+    pwdInput.addEventListener("input", () => {
+      const val = pwdInput.value;
+      let strength = "弱";
+
+      if (val.length > 8 && /[A-Z]/.test(val) && /[0-9]/.test(val)) {
+        strength = "強";
+      } else if (val.length >= 6) {
+        strength = "中";
+      }
+      strengthText.textContent = strength;
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      const target = tab.dataset.tab;
+      document.getElementById(target).classList.add("active");
+    });
+  });
+
+  // 密碼強度
+  const pwdInput = document.getElementById("new-password");
+  const strengthText = document.getElementById("strength-text");
+
+  if (pwdInput) {
+    pwdInput.addEventListener("input", () => {
+      const val = pwdInput.value;
+      let strength = "弱";
+      let className = "weak";
+
+      if (val.length > 8 && /[A-Z]/.test(val) && /[0-9]/.test(val)) {
+        strength = "強";
+        className = "strong";
+      } else if (val.length >= 6) {
+        strength = "中";
+        className = "medium";
+      }
+
+      strengthText.textContent = strength;
+      strengthText.className = className;
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      const target = tab.dataset.tab;
+      document.getElementById(target).classList.add("active");
+    });
+  });
+
+  // 密碼強度偵測
+  const pwdInput = document.getElementById("new-password");
+  const strengthText = document.getElementById("strength-text");
+  const strengthFill = document.getElementById("strength-fill");
+
+  if (pwdInput) {
+    pwdInput.addEventListener("input", () => {
+      const val = pwdInput.value;
+      let strength = "弱";
+      let className = "weak";
+      let width = "30%";
+      let color = getComputedStyle(document.documentElement).getPropertyValue("--strength-weak");
+
+      if (val.length > 8 && /[A-Z]/.test(val) && /[0-9]/.test(val)) {
+        strength = "強";
+        className = "strong";
+        width = "100%";
+        color = getComputedStyle(document.documentElement).getPropertyValue("--strength-strong");
+      } else if (val.length >= 6) {
+        strength = "中";
+        className = "medium";
+        width = "60%";
+        color = getComputedStyle(document.documentElement).getPropertyValue("--strength-medium");
+      }
+
+      strengthText.textContent = strength;
+      strengthText.className = className;
+      strengthFill.style.width = width;
+      strengthFill.style.background = color;
+    });
+  }
+});
+
+  </script> 
+  <!-- 可選：Font Awesome CDN for icons -->
+ <script src="https://kit.fontawesome.com/xxxxxxxx.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>會員登入 / 註冊</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/xxxxxxxx.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="login-page">
+    <div class="tab-group">
+      <button class="tab active" data-tab="login">會員登入</button>
+      <button class="tab" data-tab="register">會員註冊</button>
+    </div>
+
+    <div class="login-box">
+      <form id="login" class="tab-content active">
+        <div class="form-group">
+          <label for="email">電子郵件</label>
+          <input type="email" id="email" placeholder="請輸入您的電子郵件" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">密碼</label>
+          <input type="password" id="password" placeholder="請輸入您的密碼" />
+        </div>
+
+        <div class="options">
+          <label class="remember-me">
+            <input type="checkbox" />
+            記住我
+          </label>
+          <a href="#" class="forgot">忘記密碼？</a>
+        </div>
+
+        <button type="submit" class="btn-login">登入</button>
+
+        <div class="divider">
+          <span>或使用以下方式登入</span>
+        </div>
+
+        <div class="social-login">
+          <button class="social-btn fb">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button class="social-btn google">
+            <i class="fab fa-google"></i>
+          </button>
+          <button class="social-btn other">
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </form>
+
+    <form id="register" class="tab-content">
+  <div class="row">
+    <div class="form-group half">
+      <label for="last-name">姓氏</label>
+      <input type="text" id="last-name" placeholder="請輸入您的姓氏" />
+    </div>
+    <div class="form-group half">
+      <label for="first-name">名字</label>
+      <input type="text" id="first-name" placeholder="請輸入您的名字" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="new-email">電子郵件</label>
+    <input type="email" id="new-email" placeholder="請輸入您的電子郵件" />
+  </div>
+
+  <div class="form-group">
+    <label for="phone">手機號碼</label>
+    <input type="tel" id="phone" placeholder="請輸入您的手機號碼" />
+  </div>
+
+  <div class="form-group">
+    <label for="new-password">密碼</label>
+    <input type="password" id="new-password" placeholder="請設定您的密碼" />
+    <div class="password-strength">
+      密碼強度：
+      <span id="strength-text" class="weak">弱</span>
+      <div class="strength-bar">
+        <div id="strength-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="confirm-password">確認密碼</label>
+    <input type="password" id="confirm-password" placeholder="請再輸入密碼" />
+  </div>
+
+  <div class="form-group agreement">
+    <label>
+      <input type="checkbox" />
+      我同意 <a href="#">服務條款</a> 和 <a href="#">隱私政策</a>
+    </label>
+  </div>
+
+  <button type="submit" class="btn-re">註冊</button>
+</form>
+
+
+    </div>
+  </main>
+</body>
+</html>
+
+<!-- 課程專區 -->
+<!-- <!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina 課程表</title>
+  <style>
+    :root {
+      --primary-color: #B55C25;
+      --secondary-color: #c08f7d;
+      --accent-color: #e3c7b7;
+      --bg-color: #fefdfc;
+      --card-bg: #fff;
+    }
+
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background: var(--bg-color);
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .day {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 120px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .course {
+      background: var(--secondary-color);
+      color: #fff;
+      margin: 0.5rem 0;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lumina 課程表</h1>
+
+  <div class="filters">
+    <select id="difficulty">
+      <option value="">全部難度</option>
+      <option value="初學">初學</option>
+      <option value="進階">進階</option>
+    </select>
+    <select id="type">
+      <option value="">全部類型</option>
+      <option value="肌力">肌力</option>
+      <option value="有氧">有氧</option>
+      <option value="靜心">靜心</option>
+      <option value="療癒">療癒</option>
+    </select>
+  </div>
+
+  <div class="calendar" id="calendar">
+    <!-- 動態生成每一天 -->
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a href="#" class="btn" id="modal-btn">預約課程</a>
+    </div>
+  </div>
+
+  <script>
+    const courses = [
+  // Flow Fit 系列
+  { title: "Flow Fit", type: "肌力", level: "初學", day: 1, desc: "融合瑜珈與肌力訓練，提升全身線條與柔韌度。" },
+  { title: "Power Core", type: "肌力", level: "進階", day: 2, desc: "專注核心與下半身強化，適合已有運動基礎者。" },
+
+  // Energy 系列
+  { title: "Energy Barre", type: "有氧", level: "初學", day: 3, desc: "結合芭蕾與燃脂訓練，動作優雅卻充滿挑戰。" },
+  { title: "Soul Sweat", type: "有氧", level: "進階", day: 4, desc: "情緒釋放有氧課，流汗中甩開壓力與焦慮。" },
+  { title: "Cardio Basic", type: "有氧", level: "初學", day: 5, desc: "基礎有氧課，輕鬆入門燃脂世界。" },
+
+  // Inner Calm 系列
+  { title: "Inner Calm Yoga", type: "靜心", level: "初學", day: 1, desc: "深層冥想、放鬆筋膜，適合舒緩身心壓力。" },
+  { title: "Breathwork Flow", type: "靜心", level: "進階", day: 2, desc: "透過呼吸引導達到內在平衡與情緒釋放。" },
+  { title: "Mindful Stretch", type: "靜心", level: "初學", day: 3, desc: "溫和伸展課程，搭配呼吸協調放鬆感。" },
+
+  // Pilates 系列
+  { title: "Mat Pilates", type: "皮拉提斯", level: "初學", day: 4, desc: "核心雕塑與體態矯正的入門選擇。" },
+  { title: "Reformer Pilates", type: "皮拉提斯", level: "進階", day: 5, desc: "利用器械加強深層肌群鍛鍊。" },
+
+  // Moon Cycle 系列
+  { title: "Moon Cycle Move", type: "療癒", level: "初學", day: 6, desc: "根據生理週期設計的緩和運動課程。" },
+  { title: "Goddess Flow", type: "療癒", level: "進階", day: 7, desc: "女性能量覺察與柔軟體態的流動課程。" },
+
+  // 額外補充
+  { title: "Gentle Yoga", type: "靜心", level: "初學", day: 6, desc: "適合初學者放鬆身心、調節呼吸。" },
+  { title: "Mobility Flow", type: "肌力", level: "初學", day: 7, desc: "提升關節活動度並改善姿勢的溫和訓練。" },
+  { title: "HIIT Sculpt", type: "肌力", level: "進階", day: 1, desc: "短時間高強度雕塑全身線條。" },
+  { title: "Stretch & Release", type: "療癒", level: "初學", day: 2, desc: "緩解緊繃與放鬆筋膜的舒緩課程。" },
+  { title: "Balance Barre", type: "有氧", level: "進階", day: 3, desc: "結合核心平衡與有氧動作的芭蕾雕塑課。" },
+  { title: "Pilates Flow", type: "皮拉提斯", level: "初學", day: 4, desc: "動態串連動作，打造修長身形。" },
+  { title: "Zen Meditation", type: "靜心", level: "進階", day: 5, desc: "深度靜心，引導內在探索。" },
+  { title: "Body Awareness", type: "療癒", level: "初學", day: 6, desc: "提升身體感知，學習與身體對話。" },
+];
+
+      // 可再新增更多課程
+
+
+    function renderCalendar() {
+      const container = document.getElementById('calendar');
+      container.innerHTML = "";
+      for (let i = 1; i <= 7; i++) {
+        const dayEl = document.createElement('div');
+        dayEl.className = "day";
+        dayEl.innerHTML = `<strong>Day ${i}</strong>`;
+
+        const filtered = courses.filter(c => 
+          c.day === i &&
+          (!selectedDifficulty || c.level === selectedDifficulty) &&
+          (!selectedType || c.type === selectedType)
+        );
+
+        filtered.forEach(course => {
+          const el = document.createElement('div');
+          el.className = "course";
+          el.textContent = `${course.title} (${course.level})`;
+          el.addEventListener('click', () => showModal(course));
+          dayEl.appendChild(el);
+        });
+
+        container.appendChild(dayEl);
+      }
+    }
+
+    function showModal(course) {
+      document.getElementById('modal-title').textContent = course.title;
+      document.getElementById('modal-desc').textContent = course.desc;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    document.getElementById('modal').addEventListener('click', e => {
+      if (e.target.id === 'modal') {
+        document.getElementById('modal').style.display = 'none';
+      }
+    });
+
+    let selectedDifficulty = "";
+    let selectedType = "";
+
+    document.getElementById('difficulty').addEventListener('change', e => {
+      selectedDifficulty = e.target.value;
+      renderCalendar();
+    });
+
+    document.getElementById('type').addEventListener('change', e => {
+      selectedType = e.target.value;
+      renderCalendar();
+    });
+
+    renderCalendar();
+
+  </script>
+</body>
+</html> -->
+<!-- 一周的課程安排時間表 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .accordion-panel {
+  margin-left: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <ul class="accordion">
+  <li>
+    <button class="accordion-header" aria-expanded="false" aria-controls="panel1">
+      設計課程
+    </button>
+    <ul class="accordion-panel" id="panel1" hidden>
+      <li><a href="#">平面設計</a></li>
+      <li><a href="#">UI/UX</a></li>
+    </ul>
+  </li>
+  <li>
+    <button class="accordion-header" aria-expanded="false" aria-controls="panel2">
+      程式課程
+    </button>
+    <ul class="accordion-panel" id="panel2" hidden>
+      <li><a href="#">前端開發</a></li>
+      <li><a href="#">後端開發</a></li>
+    </ul>
+  </li>
+</ul>
+<script>
+  document.querySelectorAll('.accordion-header').forEach(button => {
+  button.addEventListener('click', () => {
+    const panelId = button.getAttribute('aria-controls');
+    const panel = document.getElementById(panelId);
+
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    panel.hidden = isExpanded;
+  });
+});
+
+</script>
+</body>
+</html> -->
+<!-- 分頁頁簽 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pagination ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination a,
+.pagination span {
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="pagination">
+  <ul>
+    <li><a href="#">«</a></li>
+    <li><a href="#" class="active">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><span>...</span></li>
+    <li><a href="#">10</a></li>
+    <li><a href="#">»</a></li>
+  </ul>
+</nav>
+
+<div id="pagination"></div>
+
+<script>
+  function renderPagination(currentPage, totalPages) {
+    let paginationHTML = '<ul>';
+
+    // Prev
+    if (currentPage > 1) {
+      paginationHTML += `<li><a href="#" data-page="${currentPage - 1}">«</a></li>`;
+    }
+
+    // 頁碼邏輯
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        paginationHTML += `<li><a href="#" data-page="${i}" ${i === currentPage ? 'class="active"' : ''}>${i}</a></li>`;
+      }
+    } else {
+      if (currentPage > 3) {
+        paginationHTML += `<li><a href="#" data-page="1">1</a></li>`;
+        paginationHTML += `<li><span>...</span></li>`;
+      }
+
+      let start = Math.max(1, currentPage - 1);
+      let end = Math.min(totalPages, currentPage + 1);
+
+      for (let i = start; i <= end; i++) {
+        paginationHTML += `<li><a href="#" data-page="${i}" ${i === currentPage ? 'class="active"' : ''}>${i}</a></li>`;
+      }
+
+      if (currentPage < totalPages - 2) {
+        paginationHTML += `<li><span>...</span></li>`;
+        paginationHTML += `<li><a href="#" data-page="${totalPages}">${totalPages}</a></li>`;
+      }
+    }
+
+    // Next
+    if (currentPage < totalPages) {
+      paginationHTML += `<li><a href="#" data-page="${currentPage + 1}">»</a></li>`;
+    }
+
+    paginationHTML += '</ul>';
+
+    document.getElementById('pagination').innerHTML = paginationHTML;
+
+    // 綁定事件
+    document.querySelectorAll('#pagination a').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        let page = parseInt(a.getAttribute('data-page'));
+        renderPagination(page, totalPages);
+      });
+    });
+  }
+
+  renderPagination(3, 10);
+</script>
+
+</body>
+</html> -->

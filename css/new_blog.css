@@ -1,0 +1,421 @@
+@import url("reset.css");
+
+main{
+    /* border:1px solid #b55c25; */
+    max-width: 1200px;
+    margin: 84px auto 0;
+    padding: 20px;
+}
+
+h3{
+    /* border: 1px solid red; */
+    color: #4A3B2D;
+    font-size: 28px;
+    font-weight: var(--font_weight_blod);
+    padding: 1.2vh;
+    margin: 8vh 0;
+
+    position: relative;
+}
+
+h3::before{
+    content: '';
+    background-color: var(--text_login_color);
+    width: 54px;
+    height: 2px;
+
+    position: absolute;
+    left: 7px;
+    bottom: 0;
+}
+/* ----------------tab 按鈕-------------------*/
+.studentnote_tab_btn{
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.studentnote_tab_btn button{
+    background-color: var(--color2);
+    font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
+    color: var(--color3);
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    padding: 5px 20px;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+}
+
+.studentnote_page{
+    display: none;
+}
+
+
+/* ----------------學員須知（共用）-------------------*/
+.studentnote_coming_page,.studentnote_booking_page,.studentnote_menber_page{
+    /* border: 1px solid purple; */
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: var( --color1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.studentnote_coming_page ul,.studentnote_booking_page ul,.studentnote_menber_page ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.studentnote_coming_page li ,.studentnote_booking_page li,.studentnote_menber_page li{
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.studentnote_coming_page i ,.studentnote_booking_page i,.studentnote_menber_page i{
+    /* border: 1px solid black; */
+    width: 36px;
+    height: 36px;
+}
+
+.fa-solid {
+    font-size: 36px;
+    color: var(--color6);
+}
+
+.studentnote_coming_page p ,.studentnote_booking_page p,.studentnote_menber_page p{
+    /* border: 1px solid green; */
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.studentnote_coming_page .title ,.studentnote_booking_page .title,.studentnote_menber_page .title{
+    color: var(--text_login_color);
+    font-size: 18px;
+    font-weight: var(--font_weight_blod);
+}
+
+.studentnote_coming_page .statment ,.studentnote_booking_page .statment,.studentnote_menber_page .statment{
+    color: var(--color3);
+    font-size: var(--mobie_text);
+    line-height: var(--line-height_small);
+}
+/* ---------------最新消息-------------------*/
+
+.news {
+    /* border: 1px solid grey; */
+}
+
+.news_content {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  flex-wrap: wrap;
+  /* padding: 0 1.2vh; */
+}
+
+.news_card {
+  border-radius: 12px;
+  width: 320px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.news_card .Classification {
+  background-color: #b55c25;
+  border-bottom-right-radius: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: var(--font_weight_blod);
+  padding: 6px 12px;
+
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.news_pic img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.date{
+    padding: 10px 16px;
+    color: var(--color4);
+
+    display: flex;
+    gap: 20px;
+}
+
+.news_card h4{
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color3);
+}
+
+.news_card .news_text{
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: var(--line-height_mid);
+    color: var(--color3);
+}
+
+.news_detail {
+  display: inline-block;
+  color: #b55c25;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+  transition: color 0.3s;
+}
+
+.news_detail:hover {
+  font-weight: var(--font_weight_blod);
+}
+
+.news_more {
+  /* display: block;
+  margin: 40px auto 0;
+  background-color: #a79382;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  text-align: center;
+  max-width: 100px; */
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #a3907c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.news_more:hover {
+  background-color: #4a3b2d;
+}
+
+
+
+/* ---------------專題文章-------------------*/
+.article{
+    /* border: 1px solid gold; */
+    box-sizing: border-box;
+    padding: 40px 20px; 
+    margin-top: 30px;
+}
+
+.row_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.row_all h4{
+    color: var(--color3);
+    font-weight: var(--font_weight_blod);
+}
+
+.row_all p{
+    line-height: var(--line-height_mid); 
+    letter-spacing: 0.3;
+}
+
+.clo1_left h4{
+    font-size: var(--h5_text);
+}
+.clo2_right p,.clo2_right .read_more{
+    font-size: 14px;
+
+}
+/*-----art left----*/
+.clo1_left{
+  /* border: 1px solid saddlebrown; */
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+
+  flex-basis: 0;
+  flex-grow: 1;
+
+  
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+.art_big_pic{
+    display: block;
+    border-radius: 30px;
+    width: 100%;
+    min-height: 300px;
+}
+
+
+.label_date{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.label_note{
+    display: block;
+    background-color: var(--botton_background_color);
+    color: var(--botton_text_color);
+    padding: 5px;
+    border-radius: 5px;
+} 
+
+.read_more{
+    text-decoration: none;
+    color: var(--text_login_color);
+}
+
+.read_more:hover{
+    font-weight: var(--font_weight_blod);
+}
+
+/*-----art left----*/
+.clo2_right{
+    flex-basis: 0;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.right_row{
+    /* border: 1px solid sandybrown; */
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap:12px;
+    flex-wrap: wrap;
+
+}
+
+.right_row img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.right_row .label_date{
+    font-size: 14px;
+}
+
+.right_row .label_date h4{
+    font-size: var(--mobie_text);
+}
+
+.clo1_left,.right_row{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/*-------JS執行------*/
+
+.studentnote_tab_btn .studentnote_btn_active{
+    background-color: var(--text_login_color);
+    color: var(--botton_text_color);
+}
+
+.page_active{
+    display: block;
+}
+
+/*---------回到頂部----------*/
+
+
+#backtotop{
+    display: none;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    background-color: var(--color6);
+
+    cursor: pointer;
+
+    position: fixed;
+    right: 6vw;
+    bottom: 4vh;
+    z-index: 999;
+}
+#backtotop:hover{
+    transform: translateY(-2px);
+    transition: 0.1s ease;
+    background-color: #7c9475ee;
+}
+
+.fa-arrow-up{
+    color: #fff;
+    font-size: 24px;
+}
+
+/*---------- 螢幕小於 821  時 ----------*/
+@media screen and (max-width: 821px){
+main{
+    margin-top: 0;
+}
+
+.news_content{
+    padding: 20px;
+}
+
+.news_card{
+    width: 100%;
+}
+.row_all{
+    flex-direction: column;
+}
+
+.article{
+    padding: 0;
+}
+
+.clo1_left{
+    flex-basis: auto;
+}
+
+}
+
+
+
+
+/*---------- 螢幕小於 430 時 ----------*/
+@media screen and (max-width: 431px){
+
+}

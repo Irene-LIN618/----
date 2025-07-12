@@ -1,0 +1,310 @@
+@import url("reset.css");
+
+main{
+  max-width: 1200px;
+  max-height: 2000px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+
+}
+
+/* 側邊欄 */
+aside{
+  flex-basis: 0;
+  flex-grow: 1;
+
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid #ddd;
+
+  position: sticky;
+  top: 100px;
+}
+
+.search{
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+
+    display: flex;
+    gap: 8px;
+}
+
+.search input{
+    border: none;
+}
+
+.search button{
+  background-color: #fff;
+  color: #b45d20;
+  border: none;
+  cursor: pointer;
+}
+
+.class_group,
+.level,
+.howlong{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.class_group button,
+.level button,
+.howlong button{
+  color: var(--color3);
+  font-weight: bold;
+  font-size: 1.1rem;
+  
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  
+
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.class_group ul,
+.level ol,
+.howlong ul{
+  padding: 12px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.class_group li a,
+.howlong li span,
+.level li span{
+  color: var(--color3);
+  text-decoration: none;
+}
+
+.level li,
+.howlong li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+aside > button{
+  background-color: #b45d20;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* --------------------課程區塊------------------ */
+section{
+    flex-grow: 9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 課程上方區塊 (標題 + 排序) */
+.above{
+    padding: 10px 6px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.above h3{
+  font-size: 2rem;
+  font-weight: var(--font_weight_blod);
+  color: var(--text_login_color);
+  
+}
+
+.oreder label{
+  margin-right: 8px;
+}
+
+.oreder select{
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* 課程清單 */
+.down{
+ 
+}
+
+.down ul {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'card card card';
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.down li{
+  grid-area: 'card';
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.down li:hover{
+    transform: translateY(-4px);
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* 卡片樣式 */
+.card {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+
+.card p {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.class_level {
+  background-color: #f1e3d0;
+  color: #b45d20;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.class_time {
+  font-size: 1rem;
+  color: #333;
+}
+
+.card h4 {
+  font-size: 1.1rem;
+  color: var(--color3);
+  font-weight: bold;
+}
+
+.classcard_statment {
+  font-size: 1rem;
+  color: var(--color3);
+  line-height: var(--line-height_small);
+}
+
+.card_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card_btn i img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.card_btn span {
+  font-size: 14px;
+  color: #333;
+}
+
+.card_btn button {
+  background-color: #b45d20;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ----------------分頁------------ */
+.pagination {
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li a {
+  display: block;
+  padding: 6px 12px;
+  background-color: #fff;
+  border: 1px solid #b45d20;
+  color: #b45d20;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination li a:hover {
+  background-color: #b45d20;
+  color: #fff;
+}
+
+/* 響應式 */
+@media (max-width: 821px) {
+  main {
+    flex-direction: column;
+  }
+  aside {
+    flex: 1 1 100%;
+  }
+  main > section:nth-of-type(1),
+  main > section:nth-of-type(2) {
+    flex: 1 1 100%;
+  }
+  main > section:nth-of-type(2) ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  main > section:nth-of-type(2) ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+ 

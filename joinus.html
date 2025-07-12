@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina|會員登入</title>
+    <link rel="shortcut icon" href="img/color_logo.svg" type="image/x-icon"><!-- 徽標 -->
+    <!-- Google Fonts (一次引多種字型) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN (全包) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/joinus.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/page_header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- 彩色 icon -->
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="index_top">
+                <a href="index.html"><img src="img/logo-text.png" alt=""></a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="new_blog.html">消息總覽</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="class.html">課程專區</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="question.html">常見問題</a></li>
+                        <li><a href="joinus.html">會員登入</a></li>
+                    </ul>
+                </nav>
+                <button class="menu" ><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </header><!-- logo -->
+        <!-- <img src="img/join_us_view.png" class="join_us_view"> -->
+         <main>
+            <div class="tab_btn">
+                <button class="btn_login active" data-tab="tab_login">會員登入</button>
+                <button class="btn_register" data-tab="tab_register">會員註冊</button>
+            </div>
+            <section class="login_page active " >
+                <form action="">
+                    <div class="row">
+                        <label for="username">賬號</label>
+                        <input type="text" name="username" id="username" placeholder="請輸入您的email或電話" required>
+                    </div>
+                    <div class="row">
+                        <label for="password">密碼</label>
+                        <input type="password" name="password" id="password" placeholder="請輸入您的密碼" required>
+                        <a href="#" class="forget">忘記密碼？</a>
+                    </div>
+                    <div class="row">
+                        <button class="login_rightnow">立即登入</button>
+                    </div>
+                    <div class="seperateline"></div>
+                    <div class="goregister" >
+                        <span>還沒有賬號？</span>
+                        <a href="#">立即註冊</a>
+                    </div>
+                    <div class="socialmedia">
+                        <button><span class="iconify" data-icon="logos:google-icon" style="font-size:24px;"></span><span class="icon_name">使用google賬號</span></button>
+                        <button><span class="iconify" data-icon="logos:facebook" style="font-size:24px;"></span><span class="icon_name">使用Facebook賬號</span></button>
+                        <button><img src="img/LINE_Brand_icon.png" alt="" style="font-size:24px;"><span class="icon_name">使用LINE賬號</span></button>
+                    </div>
+                </form>  
+            </section>
+            
+            <section class="register_page " style="display: none;" >
+                  <form action="">
+                    <div class="row">
+                        <label for="last_name">姓氏</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="請輸入您的姓氏" required>
+                        <label for="first_name">名字</label>
+                        <input type="text" name="first_name" id="first_name" placeholder="請輸入您的名字" required>
+                    </div>
+                    <div class="row">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <div class="row">
+                        <label for="phone">手機號碼
+                        <input type="text" name="phone" id="phone" required>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="password">密碼</label>
+                        <input type="password" name="password" id="password" placeholder="請輸入您的密碼" required>
+                        <div class="password_strength">
+                            <div class="srtrength_bar">
+                                <div class="strength_level"></div>
+                            </div>
+                            密碼強度:
+                            <span>弱</span>
+                        </div>
+                    </div>
+                    <div class="password_group_c">
+                        <label for="password_c">確認密碼</label>
+                        <input type="password_c" name="password" id="password" placeholder="請再次輸入您的密碼" required>
+                    </div>
+                    <div class="row">
+                       <input type="checkbox" name="agreement" id="agreement" required>
+                       我同意 <a href="#">服務條款</a> 和 <a href="#">隱私政策</a>
+                    </div>
+                    <div class="row">
+                        <button>立即註冊</button>
+                    </div>
+                    <div class="divider">
+                        <hr><span>或使用以下方式註冊</span><hr>
+                    </div>
+                    <div class="socialmedia">
+                        <button class="social-btn"><span class="iconify" data-icon="logos:google-icon" style="font-size:40px;"></span>
+<span>使用google賬號</span></button>
+                         <button class="social-btn"><i>icon</i><span>使用Facebook賬號</span></button>
+                        <button class="social-btn"><i>icon</i><span>使用LINE賬號</span></button>
+                    </div>
+                </form>  
+            </section> 
+            
+        </main>
+        <!-----------------footer-------------------------->
+        <footer>
+            <img src="img/text-logo.svg" alt="">
+            <h5>Your Journey to Luminous Starts Here</h5>
+            <p>phone:+123456789<br>address:No.321,Section1,inan Road,Zhongzheng District,Taipei City 100<br>open at 8:am -9:30pm</p>
+            <ul class="footer_list">
+                <li><img src="img/footer_facebook.svg" alt=""></li>
+                <li><img src="img/footer_Instagram.svg" alt=""></li>
+                <li><img src="img/footer_Twitter.svg" alt=""></li>
+                <li><img src="img/footer_Mail.svg" alt=""></li>
+            </ul>
+            <p>@2025 lumina 健身空間｜點亮妳的光</p>
+        </footer>
+    </div>
+    <Script src="JS/header_nav.js"></Script>
+</body>
+</html>

@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina|關於我們</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /><!-- google icon -->
+    <link rel="shortcut icon" href="img/color_logo.svg" type="image/x-icon"><!-- 徽標 -->
+    <!-- Google Fonts (一次引多種字型) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN (全包) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/page_header.css">
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="JS/header_nav.js">
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="index_top">
-                <img src="img/logo-text.png" alt="">
-                <nav>
+                <a href="index.html"><img src="img/logo-text.png" alt=""></a>
+                <nav class="nav">
                     <ul>
                         <li><a href="index.html">首頁</a></li>
-                        <li><a href="#">消息總覽</a></li>
-                        <li><a href="contact.html">預約體驗</a></li>
-                        <li><a href="#">課程專區</a></li>
-                        <li><a href="contact.html">關於我們</a></li>
-                        <li><a href="#">會員方案</a></li>
-                        <li><a href="#">會員登入</a></li>
+                        <li><a href="new_blog.html">消息總覽</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="class.html">課程專區</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="question.html">常見問題</a></li>
+                        <li><a href="joinus.html">會員登入</a></li>
                     </ul>
                 </nav>
+                <button class="menu" ><i class="fa-solid fa-bars"></i></button>
             </div>
         </header>
-        <main>
+        <main><!-- 分頁主視覺 -->
             <img src="img/about_view.jpg" class="about_view">
             <section class="about-us">
                 <!---------------關於我們------------------>
@@ -137,5 +141,8 @@
         <div class="button">
             <a href="#">免費體驗</a>
         </div>
+        <button id="backtotop"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+    <Script src="JS/header_nav.js"></Script>
 </body>
 </html>

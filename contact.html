@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina|預約體驗</title>
+    <title>Lumina|聯絡我們</title>
+    <link rel="shortcut icon" href="img/color_logo.svg" type="image/x-icon"><!-- 徽標 -->
+    <!-- Google Fonts (一次引多種字型) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN (全包) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/page_header.css">
+    <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="index_top">
-                <img src="img/logo-text.png" alt="">
-                <nav>
+                <a href="index.html"><img src="img/logo-text.png" alt=""></a>
+                <nav class="nav">
                     <ul>
                         <li><a href="index.html">首頁</a></li>
-                        <li><a href="#">消息總覽</a></li>
-                        <li><a href="contact.html">預約體驗</a></li>
-                        <li><a href="#">課程專區</a></li>
+                        <li><a href="new_blog.html">消息總覽</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="class.html">課程專區</a></li>
                         <li><a href="about.html">關於我們</a></li>
-                        <li><a href="#">會員方案</a></li>
-                        <li><a href="#">會員登入</a></li>
+                        <li><a href="question.html">常見問題</a></li>
+                        <li><a href="joinus.html">會員登入</a></li>
                     </ul>
                 </nav>
+                <button class="menu" ><i class="fa-solid fa-bars"></i></button>
             </div>
         </header>
+        <img src="img/contact_view .jpg" class="contact_view">
         <main>
-            <img src="img/contact_view .jpg" class="contact_view">
+            <!------------------- 聯絡表單 ----------------------->
             <p>告訴我們你想預約的項目或任何問題,我們將盡快與您聯絡</p>
-            <h3>預約體驗&聯絡我們</h3>
+            <h3>聯絡我們</h3>
             <section class="content">
-                <div class="content_contact">
-                    <ul>
+                <div class="content_left">
+                    <ul class="contactlist">
                         <li>
                             <h5>信箱</h5>
                             <span>lumina@gmail.com</span>
@@ -48,28 +55,59 @@
                         </li>
                         <li>
                             <h5>社群</h5>
-                            <ul>
-                                <li><img src="/img/footer_facebook.svg" alt=""></div></li>
-                                <li><img src="/img/footer_Instagram.svg" alt=""></div></li>
-                                <li><img src="/img/footer_Twitter.svg" alt=""></div></li>
-                                <li><img src="/img/footer_Mail.svg" alt=""></div></li>
+                            <ul class="sociallist">
+                                <li><img src="img/footer_facebook.svg" alt=""></li>
+                                <li><img src="img/footer_Instagram.svg" alt=""></li>
+                                <li><img src="img/footer_Twitter.svg" alt=""></li>
+                                <li><img src="img/footer_Mail.svg" alt=""></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="content_rec">
-                    <form action="" method="POST">  
-                        <h2>預約體驗</h2>
-                        <label for="username">姓名 : </label>  <input type="text" id="username" name="username" required><br><br>
-                        <label for="password">密碼 : </label>  <input type="password" id="password" name="password" required><br><br>
-                        <label for="email">Email:</label>  <input type="email" id="email" name="email"><br><br>
-                        <p>預約項目 :</p>  <label><input type="radio" name="project" value=""> 線上咨詢</label>  <label><input type="radio" name="project" value=""> 預約體驗</label><br><br>
-                        <label for="city">地區：</label>  <select name="city" id="city">    <option value="">信義館</option>    <option value="">仁愛館</option>    <option value="">板橋館</option>  <option value="">台中館</option></select><br><br>
-                        <label for="class">預約課程：</label>  <select name="classname" id="classname">    <option value="">小班團課</option>    <option value="">一對一專屬課程</option>    </select><br><br>
-                        <label for="message">留言：</label><br>  <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
-                        <input type="submit" value="送出">
-                        
-                    </div>
+                <div class="line"></div>
+                <div class="content_right">
+                    <form action=""  method="POST"> 
+                        <div class="row">
+                            <label for="username">姓名 : </label>  
+                            <input type="text" id="username" name="username" required>
+                        </div> 
+                        <div class="row">
+                            <label for="password">密碼 : </label>  
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="row">
+                            <label for="email">Email:</label>  
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="row">
+                            <label for="LINE">LINE ID:</label>  
+                            <input type="ID" id="LINE" name="LINE">
+                        </div>
+                        <div class="row">
+                            <label for="city">地區：</label>  
+                            <select name="city" id="city">    
+                                <option value="">信義館</option>    
+                                <option value="">仁愛館</option>    
+                                <option value="">板橋館</option>  
+                                <option value="">台中館</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="class">預約課程：</label>  
+                            <select name="classname" id="classname">   
+                                <option value="">小班團課</option>    
+                                <option value="">一對一專屬課程</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="message">留言：</label><br>  
+                            <textarea id="message" name="message" rows="5" cols="30">
+                            </textarea>
+                        </div>
+                        <div class="row"></div>
+                            <input type="submit" class="submit" value="送出">
+                        </div> 
+                    </form>
             </section>
             
         </main>
@@ -87,6 +125,6 @@
             <p>@2025 lumina 健身空間｜點亮妳的光</p>
         </footer>
     </div>
-    
+    <script src="JS/header_nav.js"></script>
 </body>
 </html>

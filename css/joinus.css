@@ -1,0 +1,192 @@
+@import url(reset.css);
+
+.body{
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+main{
+    /* border: 1px solid rebeccapurple; */
+    max-width: 800px;
+    display: block;
+    box-sizing: border-box;
+    margin: 67px auto 60px;
+    padding: 40px  0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px ;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    transform: scale(0.8);
+
+}
+/*-----------------切換按鈕---------------*/
+.tab_btn{
+    /* border: 1px solid purple; */
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    gap: 60px;
+
+    font-family:'Inria Serif','Noto Serif TC',sans-serif,serif;
+
+}
+.btn_login,.btn_register{
+    background:none;
+    border: none;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    border-bottom: 2px solid transparent;
+
+}
+.btn_login:hover,.btn_register:hover{
+    border-color: var(--color5);
+    color: var(--color5);
+}
+
+.tab_btn .active{
+    border-bottom: 2px solid var(--text_login_color);
+    color: var(--text_login_color);
+}
+
+
+/*------------------會員登入---------------*/
+.login_page ,.register_page{
+    /* border: 5px solid forestgreen; */
+    min-width: 60%;
+    margin: 0 auto;
+}
+
+form{
+    /* outline: 2px solid black; */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login_page .row{
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+
+.login_page .forget{
+    align-self: flex-end;
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 14px;
+}
+
+.login_page label{
+    font-size:18px ;
+    font-weight: var(--font_weight_blod);
+    color: var(--color3);
+    line-height: var(--line-height_small);
+}
+
+.login_page input{
+    border-color:var(--text_login_color) ;
+    min-height: 24px;
+    border:1px solid var(--text_login_color);
+    border-radius: 5px;
+}
+
+.login_rightnow{
+    border: none;
+    background-color: var(--text_login_color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    align-self: center;
+
+    font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
+    text-align: center;
+    color: #fff;
+    line-height: var(--line-height_mid);
+
+    cursor: pointer;
+
+}
+
+.seperateline{
+    height: 1px;
+    background-color: var(--text_login_color);
+}
+.goregister{
+    /* border: 1px solid orangered; */
+    display: flex;
+    justify-content: space-between;
+}
+.login_page span{
+    font-size: 14px;
+}
+
+
+.goregister a{
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 14px;
+}
+
+.socialmedia{
+    border-radius: 20px;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.socialmedia button{
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid var(--text_login_color);
+    color: var(--color3);
+    font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap:20px
+}
+
+.socialmedia span,.socialmedia img{
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.socialmedia .icon_name{
+    text-align: center;
+    display: block;
+    width: 50%;
+}
+
+.socialmedia button:hover{
+    background-color: var(--color1);
+    color: var(--color3);
+    font-weight: var(--font_weight_blod);
+    transition: 0.3s;
+}
+
+.login_page a:hover{
+    font-weight: var(--font_weight_blod);
+    color: var(--text_login_color);
+}

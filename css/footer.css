@@ -8,6 +8,7 @@ footer{
     color: var(--footer_text_color);
     padding: 10px 0;
     
+    
 }
 
 footer.img{}
@@ -21,7 +22,7 @@ footer h5{
 footer h5::before{
     content: '';
     display: block;
-    width: 1000px;
+    width: 80%;
     height: 1px;
     background-color: var(--footer_text_color);
     
@@ -51,7 +52,7 @@ footer li{
 }
 /*-----------------免費體驗-------------------*/
 
-.buttn{
+.button{
     position: relative;
     position: absolute;
 }
@@ -60,7 +61,7 @@ footer li{
     display: block;
     background-color: var(--botton_background_color);
     color: var(--botton_text_color);
-    font-size: var(--h5);
+    font-size: var(--h6_btn);
     font-weight: var(--font-weight_blod);
     border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
@@ -71,7 +72,7 @@ footer li{
     box-sizing: border-box;
     padding: 10px 2px;
     position: fixed;
-    bottom: 50px;
+    bottom: 50vh;
     right: 0;
 }
 
@@ -89,3 +90,4 @@ footer li{
     100%{
         transform: translateY(0);
     }
+}

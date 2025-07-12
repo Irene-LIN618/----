@@ -4,70 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina|專為女性打造的溫柔健身空間</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link rel="shortcut icon" href="img/color_logo.svg" type="image/x-icon"><!-- 徽標 -->
+    <!-- Google Fonts (一次引多種字型) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN (全包) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
-
 </head>
 <body>
     <div class="wrapper"><!--------最外層-----------> 
         <!--主視覺+導航列-->
         <header>
             <div class="index_top">
-                <img src="img/index_logo.svg" alt="">
-                <nav>
+                <a href="index.html" class="logo"><img src="img/index_logo.svg" alt=""></a>
+                <nav class="nav">
                     <ul>
                         <li><a href="index.html">首頁</a></li>
-                        <li><a href="#">消息總覽</a></li>
-                        <li><a href="contact.html">預約體驗</a></li>
-                        <li><a href="#">課程專區</a></li>
+                        <li><a href="new_blog.html">消息總覽</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="class.html">課程專區</a></li>
                         <li><a href="about.html">關於我們</a></li>
-                        <li><a href="#">會員方案</a></li>
-                        <li><a href="#">會員登入</a></li>
+                        <li><a href="question.html">常見問題</a></li>
+                        <li><a href="joinus.html">會員登入</a></li>
                     </ul>
                 </nav>
+                <button class="menu" ><i class="fa-solid fa-bars"></i></button>
             </div>
             <img src="img/index_header_img.svg" alt="">
         </header>
         <!--全區塊-->
         <main>
-            <!---區塊1--->
+            <!---認識lumina--->
             <section class="introduct">
-                <img src="img/index_introduct-img.jfif" alt="">
+                <div class="introduct_pic"><img src="img/index_introduct-img.jfif" alt=""></div>
                 <div class="introduct_text">
                     <h2>認識 Lumina | What</h2>
                     <p>優雅，是我們的力量<br><br>LUMINA 相信，每位女性都擁有與生俱來的柔和力量。透過空間、節奏、儀式與覺察，讓身心重新對話，喚醒自我溫柔的光芒。我們不塑形，而是找回自己的形狀。讓運動不只是流汗，而是一次心靈與身體的對話，創造自我關照的時光。</p>
                 </div>
             </section>
-            <!--區塊2-->
+            <!--我們的課程-->
             <section class="our_class">
                 <h2>課程 | Our Class</h2>
                 <ul>
                     <li>
                         <img src="img/index_class_group.png" alt="">
                         <h4>精緻小班(4~8人)</h4>
-                        <p>團課提供你想要的每一種選擇,可自由組班4人即可開課,有人一起才更有動力嗎?從入門到專業,從探索式到進階<br><br>Lumina 精緻小班課程滿足你的所有需求</p>
+                        <p>團課提供你想要的每一種選擇,可自由組班4人即可開課,有人一起才更有動力嗎?從入門到專業,從探索式到進階。Lumina 精緻小班課程滿足你的所有需求。</p>
                         <a href="#">More</a>
                     </li>
                     <li>
-                        <img src="img/index_class_1v1.png" alt="">
+                        <img src="img/index_class_personal.png" alt="">
                         <h4>專屬課程</h4>
-                        <p>最適合I人的獨處模式,不想跟不認識的人一起上課,無論是你是想瘦身、增肌減脂、體態雕塑、舒展身心等<br><br>Lumina  1v1專屬課程為你量身定制最適合你的課程讓你輕鬆達到目標</p>
+                        <p>最適合I人的獨處模式,不想跟不認識的人一起上課,無論是你是想瘦身、增肌減脂、體態雕塑、舒展身心等。Lumina 1v1專屬課程為你量身定制最適合你的課程讓你輕鬆達到目標。</p>
                         <a href="#">More</a>
                     </li>
                     <li>
-                        <img src="img/index_class_perfession.jpg" alt="">
+                        <img src="img/index_class_coach.png" alt="">
                         <h4>專業證照</h4>
-                        <p>當你的生活離不開運動,想要把最正確的事和更多的人分享,得到專業額認證讓喜愛的事和事業共存<br><br>Lumina 和你一起成為最專業的老師傳遞更多的美</p>
+                        <p>當你的生活離不開運動,想要把最正確的事和更多的人分享,得到專業額認證讓喜愛的事和事業共存。Lumina 和你一起成為最專業的老師傳遞更多的美。</p>
                         <a href="#">More</a>
                     </li>
                 </ul>
             </section>
             <img src="img/index_middle.png" class="middle_pic">
+            <!-- 探索之旅 -->
             <section class="journey">
                 <h3>探索之旅 | Voyage of Discovery</h3>
                 <div class="journey_content">
@@ -89,7 +93,7 @@
                                 <span>精選課程</span>
                             </a>
                         </div>
-                        <img src="img/index_journey-page2.png" alt="">
+                        <img src="img/index_journey_page2.png" alt="">
                     </section>
                     <section class="challenge">
                         <div class="challenge_text">
@@ -99,7 +103,7 @@
                                 <span>專屬定制</span>
                             </a>
                         </div>
-                        <img src="img/index_journey-page3.jpg" alt="">
+                        <img src="img/index_journey_page3.png" alt="">
                     </section>
                     <section class="coach">
                         <div class="coach_text">
@@ -109,7 +113,7 @@
                                 <span>專業證照</span>
                             </a>
                         </div>
-                        <img src="img/index_journey-page4.png" alt="">
+                        <img src="img/index_journey_page4.png" alt="">
                     </section>
                 </div>
             </section>
@@ -130,6 +134,8 @@
         <div class="button">
             <a href="contact.html">免費體驗</a>
         </div>
+        <button id="backtotop"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
+    <Script src="JS/header_nav.js"></Script>
 </body>
 </html>

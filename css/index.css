@@ -1,11 +1,8 @@
 @import url("reset.css");
 
 body{
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Inria Serif", serif;
-
+    font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
+    position: relative;
 }
 
 
@@ -15,7 +12,7 @@ body{
     margin: 0 auto;
 
     background-color: var(--botton_text_color);
-    position: relative;
+    /* position: relative; */
 }
 
 /*-----------------主視覺-------------------*/
@@ -23,6 +20,8 @@ header{
     /* border: 1px solid blue; */
     background-image: url("../img/index_main_bg.png");
     background-size: cover;
+    background-position: center center;
+    
     width: 100%;
     height: 600px;
     
@@ -34,76 +33,102 @@ header{
 .index_top{
     /* outline: 1px solid green; */
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    /* background-color: rgba(225, 225, 225, 0.15); */
-    
     display: flex;
-    justify-content: center;
-    gap: 132px;
-    box-sizing: border-box;
-    padding:0 20px 0 20px;
+    justify-content: space-between;
+    align-items: center;
 
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999; */
+    box-sizing: border-box;
+    padding:0 20px;
+
 }
 /*---------logo----------*/
 .index_top img{
     /* outline: 1px solid pink; */
-    width: 120px;
-    height: 120px;
+    width: clamp(120px, 11vw, 240px); 
+    max-height: 150px;
+  
 
     display: block;
     box-sizing: border-box;
-    margin-left: 20px;
+    margin-left: 10px;
 
 }
 /*---------導覽欄----------*/
 header nav{
     /* outline: 1px solid pink; */
-    width: 898px;
-    text-align: center;
-
-    align-content: center;
+    align-items: center;
 }
 
 header ul{   
     display: flex;
+    gap: 20px;
 }
 
 header li{
     /* border: 1px solid yellow; */
-    flex-basis: 0;
-    flex-grow: 1;
 } 
 
 nav a{
     /* outline: 1px solid red; */
-    line-height: 1.4;
+    line-height: 1.2;
     color: var(--botton_text_color);
-    font-size: var(--h5); 
+    font-size: var(--h1_nav); 
+    font-weight: var(--font_weight_blod);
+    border-bottom: 2px solid transparent;
 
     display: block;
     box-sizing: border-box;
     padding: 10px 0;
     
     text-decoration: none;
-    text-shadow: 0 0 5px black;
+    text-shadow: 0 0 3px black;
+    text-align: center;
     
 }
 
 nav a:hover{
-    border-bottom: 1px solid white;
+    border-color:  gainsboro;
 }
+
+/* nav a:hover {
+    box-shadow: inset 0 -2px 0 gainsboro;
+} */
+
+
+/*漢堡選擔按鈕*/
+.menu{
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+    max-height: 50px;
+    align-self: flex-start;
+
+    cursor: pointer;
+}
+
+.menu .fa-solid{
+    font-size: 24px;
+    color: var(--color3);
+    font-weight: var(--font_weight_blod);
+
+    padding: 10px;
+}
+
+.active{
+    display: block;
+}
+
 /*---------會員登入按鈕----------*/
 header li:last-child a{
     display: block;
     background-color: var(--text_login_color);
     box-sizing: border-box;
     border-radius: 16px;
-    /* box-sizing: border-box;
-    padding: 5px 2px ; */
+    box-sizing: border-box;
+    padding: 5px 2px ; 
    
 
     transition: 0.3s ease;
@@ -112,12 +137,12 @@ header li:last-child a{
 }
 
 header li:last-child:hover a{
-    transform: scale(1);
+    transform: scale(0.9);
 }
 
 header > img{
     display: block;
-    width: 463px;
+    max-width: 463px;
     flex-grow: 1 ;
     margin-left: 16%;
     margin-bottom: 6%;
@@ -144,106 +169,113 @@ header > img{
 }
 /*-----------------首頁內容區塊-------------------*/
 
-/*-----------introduct-------------*/
+/*-----------認識lumina-------------*/
 
 .introduct{
     /* outline: 1px solid greenyellow; */
     
-    width: 100%;
-    height: 680px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 60px auto;
+    padding: 0 60px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap:60px;
-
 }
 .introduct img{
     /* outline: 1px solid red; */
     display: block;
-    width: 480px;
-    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.introduct_pic{
+    flex-basis: 0;
+    flex-grow: 1;
+    min-height: 468px;
 }
 
 .introduct_text{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 480px;
+    flex-basis: 0;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
 }
 
 
 .introduct_text h2{
     /* outline: 3px solid gold; */
-    font-size: var(--h2);
+    font-size: var(--h2_sec_title);
     font-weight: var(--font_weight_blod);
     color: var(--text_login_color);
-    text-align: left;
+    align-self: flex-start;
 }
 
 .introduct_text p{
     /* outline: 1px solid black; */
-    font-size: var(--h5);
+    font-size: var(--h5_text);
     color: var(--text_color);
-    line-height: var(--line-height_text);
+    line-height: var(--line-height_big);
     text-align: left;
-    width: 400px;
     margin-top: 94px;
-    text-shadow: #fff 2 2 2 0.2 ;
+    
 
 }
 
 
-/*-------------our class-------------*/
+/*-------------課程分類-------------*/
 .our_class{
-    width: 100%;
-    /* transform: scale(0.8); */
-    background-color: #e3d0be4c;
-}
-
-.our_class img{
-    display: block;
-    width: 280px;
-    height: 320px;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 .our_class h2{
-    font-size: var(--h2);
+    font-size: var(--h2_sec_title);
     color: var(--text_login_color);
     font-weight: var(--font_weight_blod);
-    line-height: 120px;
+    line-height: var(--line-height_big);
     text-align: center;
-    height: 120px;
+    
+    padding: 0 0 60px;
 }
 
 .our_class ul{
     /* outline: 1px solid salmon; */
-    height: 640px;
-    padding: 24px 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0.8);
-
-    gap: 40px;
+    width: 100%;
+    /* min-height: 680px; */
+    box-sizing: border-box;
+    padding: 0 6%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-areas: 'card card card'; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    gap: 60px;
 }
 
 .our_class li{
-    width: 320px;
-    height: 100%;
+    /* grid-area: 'card'; */
+    /* max-width: 320px;
+    min-height: 100%; */
     background-color: #fff;
-    /* border-radius: 10px; */
-    box-sizing: border-box;
-    /* padding: 20px; */
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px black;
+    /* border-radius: 20px; */
+    /* overflow: hidden; */
+    /* border: 1px solid #ccc; */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 
     position: relative;
 }
 
 .our_class img{
-    width: 320px;
-    height: 320px;
-    object-position: center center;
-    
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .our_class h4{
@@ -253,13 +285,16 @@ header > img{
 
     color: var(--text_login_color);
     font-size: var(--h4);
+    font-weight: var(--font_weight_blod);
     text-align: center;
 }
 
 .our_class p{
-    color: var(--normal);
-    line-height: var(--line-height_text);
+    padding: 0 6%;
+    font-size: var(--h6_btn);
+    line-height: var(--line-height_mid);
     letter-spacing: 1px;
+    margin-bottom: 60px;
 }
 
 .our_class a{
@@ -267,11 +302,11 @@ header > img{
     width: 60px;
     padding: 5px 10px;
     position: absolute;
-    right: 0;
-    bottom: 20px;
+    right: 1px;
+    bottom: 1px;
 
     background-color: var(--botton_background_color);
-    font-size: var(--h5);
+    font-size: var(--h6_btn);
     color: var(--botton_text_color);
     text-align: center;
     text-decoration: none;
@@ -306,15 +341,15 @@ header > img{
 
 .journey h3{
     color: var(--text_login_color);
-    font-size: var(--h3);
-    font-weight: var(--font-weight_blod);
+    font-size: var(--h2_sec_title);
+    font-weight: var(--font_weight_blod);
     text-align: center;
     padding-top: 20px;
 
 }
 
 .journey h4{
-    font-size: var(--h4);
+    font-size: var(--h3_card_title);
     color: var(--text_login_color);
     line-height: var(--line-height_title);
 
@@ -323,9 +358,10 @@ header > img{
 
 .journey p{
     color: var(--text_color) ;
-    font-size: var(--text);
-    line-height: var(--line-height_text);
+    font-size: 16px;
+    line-height: var(--line-height_big);
     text-align: left;
+
     padding: 0 48px;
     margin-top: auto;
     margin-bottom: auto;
@@ -338,7 +374,7 @@ header > img{
     display: block;
   
     width: 132px;
-    margin-top: auto;
+    margin-bottom: auto;
 
     z-index: 10;
     position: relative;
@@ -351,13 +387,13 @@ header > img{
 .journey a span{
     width: 100%;
     display: block;
-  border-radius: 10px;
+    border-radius: 10px;
     background-color: var(--botton_background_color);
     color: var(--botton_text_color);
-    font-size: var(--h5);
+    font-size: var(--h6_btn);
     font-weight: var(--font-weight_blod);
     letter-spacing: 1px;
-    line-height: var(--line-height_text);
+    line-height: var(--line-height_big);
     text-align: center;
 }
 
@@ -382,9 +418,10 @@ header > img{
 
 
 .journey_content img{
-    width: 400px;
-    height: 480px;
-
+    max-width: 400px;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center;
     z-index: 10;
 }
 
@@ -393,12 +430,14 @@ header > img{
     display: flex;
     justify-content: center;
     gap: 120px;
+    flex-wrap: wrap;
 }
 
 .begin_text,.build_text,.challenge_text,.coach_text{
     /* outline: 2px solid plum; */
-    width: 360px;
-    height: 360px;
+    max-width: 360px;
+    max-height: 360px;
+
     display: flex;
     flex-direction: column;
     z-index: 5;
@@ -455,17 +494,110 @@ header > img{
     margin: auto;
 }
 
-.build h4,.coach h4{
+.build h4,.coach h4,.build p,.coach p{
     align-self: end;
     position: relative;
 }
 
-
+.build p,.coach p{
+    max-width: 280px;
+}
 .begin a,.challenge a{
-    align-self: end;
+    /* align-self: end; */
 }
 
 .build a,.coach a{
+    align-self: end;
+}
+
+/*---回到頂部----*/
+
+
+#backtotop{
+    display: none;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 12px;
+    background-color: var(--color6);
+
+    cursor: pointer;
+
+    position: fixed;
+    right: 6vw;
+    bottom: 4vh;
+    z-index: 999;
+}
+#backtotop:hover{
+    transform: translateY(-2px);
+    transition: 0.1s ease;
+    background-color: #7c9475ee;
+}
+
+.fa-arrow-up{
+    color: #fff;
+    font-size: 24px;
+}
+
+
+
+
+/*---------- 螢幕小於 821  時 ----------*/
+@media screen and (max-width: 821px){
+/*----RWD-漢堡----*/
+header{
+    position: relative;
+}
+.menu{
+    z-index: 999;
+}
+nav{
+    display: none;
+    
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
 
 }
+nav a{
+    color: var(--text_login_color);
+    text-shadow: none;
+}
+
+nav a:hover{
+    border-color: transparent;
+}
+
+header li:last-child a{
+    color: #fff;
+}
+
+header ul{
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 20px 5px;
+    background-color: var(--about_backgroud_color);
+    color: var(--color3);
+}
+
+.menu{
+    display: block;
+}
+
+}
+
+
+/*---------- 螢幕小於 821  時 ----------*/
+@media screen and (max-width: 821px){}
+
+
+
+/*---------- 螢幕小於 430 時 ----------*/
+@media screen and (max-width: 431px){
+
+}
+ 
 

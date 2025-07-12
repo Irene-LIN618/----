@@ -1,38 +1,52 @@
-@import url("reset.css");
 
 :root{
 
-    /*----文字字形----*/
-    --font_family_primary:Inria Serif;
-    --font_family_article: Great Vibes;
-    --font_family_footer:Bree Serif;
-
     /*----字體寬度----*/
-    --font_weight_regular:normal;
-    --font_weight_blod:bold;
+    --font_weight_regular: normal;
+    --font_weight_blod: bold;
 
     /*----文字大小-----*/
-    --h1:3.5rem;/*56*/
-    --h2:3rem;/*48px*/
-    --h3:2.5rem;/*40px*/
-    --h4:2rem;/*32px*/
-    --h5:1.5rem;/*24px*/
-    --h6:1rem;/*16px*/
-    --p:1rem;
-    
+    /* --h1:3.5rem;/*56px
+    --h2:3rem;/*48px
+    --h3:2.5rem;/*40px
+    --h:2.25rem/*36px
+    --h4:2rem;/*32px
+    --h:1.75rem/*28px
+    --h5:1.5rem;/*24px
+    --h:1.375rem/*22px
+    --h:1.25rem/20px
+    --h5:1.125rem;/*18px
+    --p:1rem;/*16px 
+    --small_p:0.75rem/*12px */
 
+    --h1_nav:clamp(1.1rem,1.7vw,1.5rem); /*nav:20/1440*100*/
+    --h2_sec_title:clamp(1.5rem,2.7vw,2.5rem); /*section title*/
+    --h3_card_title:clamp(1.25rem,2.5vw,2.25rem);
+    --h4:clamp(1.5rem,1.9vw, 1.75rem); /**/
+    --h5_text:clamp(1.1rem,1.7vw, 1.5rem);
+    --h6_btn:clamp(1rem,1.38vw, 1.25rem);
+    --mobie_text:clamp(0.75rem,1.1vw, 1rem); 
+    
     /*---color----*/
-    --botton_background_color:#E2C4AA;
-    --botton_text_color:white;
     --text_login_color:#B55C25;
+    --botton_background_color:#E2C4AA;
     --section_background_color:#E2D9CB;
     --footer_text_color:#5B3C1D;
     --footer_buttontext_color:#A66B5A;
     --text_color:rgb(98, 98, 98);
     --about_backgroud_color:#FFFAF7;
+    --botton_text_color:white;
+    --color1:#F8F5F2;
+    --color2:#EAD9C9;
+    --color3:#4A3B2D;
+    --color4:#A79382;
+    --color5:#C08F52;
+    --color6:#A7B8A2;
+  
 
     /*----行高-----*/
 
-    --line-height_text: 1.6;
-    --line-height_title:1.4;
+    --line-height_big: 1.6;
+    --line-height_mid: 1.4;
+    --line-height_small:1.2;
 }

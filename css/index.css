@@ -125,7 +125,6 @@ nav a:hover{
 header li:last-child a{
     display: block;
     background-color: var(--text_login_color);
-    box-sizing: border-box;
     border-radius: 16px;
     box-sizing: border-box;
     padding: 5px 2px ; 
@@ -188,16 +187,17 @@ header > img{
     /* outline: 1px solid red; */
     display: block;
     width: 100%;
+    height:auto ;
     object-fit: cover;
 }
 .introduct_pic{
-    flex-basis: 0;
+    flex-basis: 50%;
     flex-grow: 1;
     min-height: 468px;
 }
 
 .introduct_text{
-    flex-basis: 0;
+    flex-basis: 50%;
     flex-grow: 1;
 
     display: flex;
@@ -351,8 +351,7 @@ header > img{
 .journey h4{
     font-size: var(--h3_card_title);
     color: var(--text_login_color);
-    line-height: var(--line-height_title);
-
+    line-height: var(--line-height_small);
     z-index: 10;
 }
 
@@ -418,8 +417,8 @@ header > img{
 
 
 .journey_content img{
-    max-width: 400px;
-    max-height: 480px;
+    width: 400px;
+    height: 480px;
     object-fit: cover;
     object-position: center;
     z-index: 10;
@@ -430,7 +429,6 @@ header > img{
     display: flex;
     justify-content: center;
     gap: 120px;
-    flex-wrap: wrap;
 }
 
 .begin_text,.build_text,.challenge_text,.coach_text{
@@ -473,6 +471,8 @@ header > img{
 
 .build_text,.coach_text{
     align-self: end;
+    min-height: 360px;
+
 }
 
 .begin h4,.challenge h4{
@@ -500,7 +500,8 @@ header > img{
 }
 
 .build p,.coach p{
-    max-width: 280px;
+    margin: auto 0;
+    
 }
 .begin a,.challenge a{
     /* align-self: end; */
@@ -591,7 +592,11 @@ header ul{
 
 
 /*---------- 螢幕小於 821  時 ----------*/
-@media screen and (max-width: 821px){}
+@media screen and (max-width: 821px){
+
+
+}
+
 
 
 

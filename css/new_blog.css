@@ -41,7 +41,7 @@ h3::before{
     background-color: var(--color2);
     font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
     color: var(--color3);
-    font-size: 18px;
+    font-size: clamp(0.8rem,1.38vw, 1.25rem);
     text-align: center;
     border: none;
     padding: 5px 20px;

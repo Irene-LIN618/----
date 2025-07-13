@@ -196,6 +196,9 @@ main h4{
     align-items: center;
     justify-content: center;
     gap:20px;
+    
+    width: 100%;
+    overflow: hidden;
 }
 
 .space_img img{
@@ -303,4 +306,112 @@ main h4{
 .fa-arrow-up{
     color: #fff;
     font-size: 24px;
+}
+
+
+/* ---------- RWD：螢幕寬度小於 1200px ---------- */
+@media (max-width: 1200px) {
+
+  .about-us {
+    width: 100%;
+    padding: 0 40px;
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+  }
+
+  .sec1-left {
+    gap: 40px;
+  }
+
+  .sec1_right {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .right-top,
+  .right-bottom {
+    height: auto;
+    flex-grow: 1;
+  }
+}
+
+
+/* ---------- RWD：螢幕寬度小於 768px ---------- */
+@media (max-width: 768px) {
+
+  .space_img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .whychoose ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .whychoose p {
+    width: auto;
+    text-align: center;
+  }
+
+  .location {
+    padding: 60px 20px;
+  }
+
+  .location_text {
+    width: 100%;
+    height: auto;
+    transform: none;
+    padding: 20px;
+  }
+
+  .location_pic {
+    position: static;
+    margin-top: 40px;
+  }
+
+  .location_pic ul {
+    justify-content: center;
+  }
+
+  .location_pic img {
+    width: 150px;
+    height: 160px;
+  }
+
+}
+
+
+/* ---------- RWD：螢幕寬度小於 430px ---------- */
+@media (max-width: 430px) {
+
+  main {
+    margin-top: 50px;
+  }
+
+  .about_view {
+    height: 180px;
+  }
+
+  .space_img img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .sec4 h4 {
+    padding: 40px 10px;
+  }
+
+  #backtotop {
+    right: 4vw;
+    bottom: 3vh;
+    padding: 8px 10px;
+  }
+
+  .fa-arrow-up {
+    font-size: 20px;
+  }
 }

@@ -174,5 +174,28 @@
         </footer>
     </div>
     <Script src="JS/header_nav.js"></Script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const asideButtons = document.querySelectorAll("aside button");
+
+    asideButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const list = btn.nextElementSibling;
+
+      if (list && (list.tagName === "UL" || list.tagName === "OL")) {
+        list.classList.toggle("open");
+
+        const icon = btn.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-chevron-down");
+          icon.classList.toggle("fa-chevron-up");
+        }
+      }
+    });
+  });
+});
+</script>
+
+
 </body>
 </html>

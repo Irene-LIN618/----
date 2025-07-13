@@ -24,7 +24,7 @@ aside{
 
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
   border: 1px solid #ddd;
 
   /* position: sticky;
@@ -84,7 +84,7 @@ aside{
 .howlong ul{
 
   display: none;
-  padding: 12px;
+  /* padding: 12px; */
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,8 @@ aside{
 .class_group li,
 .level li,
 .howlong li{
-  padding: 5px 10px;
+  padding: 16px 0 6px 10px;
+  overflow: hidden;
 }
 
 .class_group li a,
@@ -295,6 +296,20 @@ section{
   color: #fff;
 }
 
+/*-----------------------------*/
+
+aside ul,
+aside ol {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+aside ul.open,
+aside ol.open {
+  max-height: 500px; /* 預設可抓大一些，避免內容太多顯示不全 */
+}
+
 /* 響應式 */
 @media screen and (max-width: 821px) {
   main {
@@ -318,11 +333,3 @@ section{
   }
 }
 
- @media screen and (max-width: 800px) {
-
- }
-
-
- @media (max-width: 800px) {
-  
- }

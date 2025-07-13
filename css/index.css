@@ -591,18 +591,84 @@ header ul{
 }
 
 
-/*---------- 螢幕小於 821  時 ----------*/
-@media screen and (max-width: 821px){
+@media screen and (max-width: 821px) {
+  /* --- 認識lumina區塊改為堆疊 --- */
+  .introduct {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
 
+  .introduct_pic,
+  .introduct_text {
+    width: 100%;
+  }
 
+  /* --- journey每個section堆疊 --- */
+  .journey_content .begin,
+  .journey_content .build,
+  .journey_content .challenge,
+  .journey_content .coach {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .journey_content .build,
+  .journey_content .coach {
+    flex-direction: column-reverse;
+  }
+
+  .journey_content section img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .journey_content section div {
+    max-width: 100%;
+  }
+
+  /* --- our_class grid 單欄 --- */
+  .our_class ul {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .our_class li {
+    max-width: 100%;
+  }
+
+  /* --- footer置中 --- */
+  footer {
+    text-align: center;
+  }
 }
 
+@media screen and (max-width: 430px) {
+  .introduct {
+    gap: 20px;
+  }
 
+  .journey_content .begin,
+  .journey_content .build,
+  .journey_content .challenge,
+  .journey_content .coach {
+    gap: 20px;
+  }
 
+  .our_class h2 {
+    font-size: calc(var(--h2_sec_title) * 0.9);
+  }
 
-/*---------- 螢幕小於 430 時 ----------*/
-@media screen and (max-width: 431px){
+  .our_class p {
+    font-size: calc(var(--h6_btn) * 0.9);
+  }
 
+  nav ul {
+    gap: 10px;
+  }
 }
+
  
 

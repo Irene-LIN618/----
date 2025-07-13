@@ -187,7 +187,8 @@ header > img{
     /* outline: 1px solid red; */
     display: block;
     width: 100%;
-    height:auto ;
+    max-height:460px;
+    min-height: 230px;
     object-fit: cover;
 }
 .introduct_pic{
@@ -213,6 +214,9 @@ header > img{
     font-size: var(--h2_sec_title);
     font-weight: var(--font_weight_blod);
     color: var(--text_login_color);
+
+    padding: 10px 0;
+
     align-self: flex-start;
 }
 
@@ -524,7 +528,7 @@ header > img{
     cursor: pointer;
 
     position: fixed;
-    right: 6vw;
+    right: 2vw;
     bottom: 4vh;
     z-index: 999;
 }
@@ -601,8 +605,11 @@ header ul{
 
   .introduct_pic,
   .introduct_text {
-    width: 100%;
+    width: 80%;
   }
+.introduct_text{
+    gap:0;
+}
 
   /* --- journey每個section堆疊 --- */
   .journey_content .begin,
@@ -610,22 +617,45 @@ header ul{
   .journey_content .challenge,
   .journey_content .coach {
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .begin, .challenge{
+    transform: translateY(0);
   }
 
   .journey_content .build,
-  .journey_content .coach {
-    flex-direction: column-reverse;
+  .journey_content .begin,
+   .journey_content .challenge{
+    padding-top: 40px;
+    margin-bottom: 40px;
+    margin: 0 auto;
   }
 
-  .journey_content section img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+  .journey_content .coach{
+    margin: 0 auto;
   }
 
-  .journey_content section div {
+  .begin_text, .build_text, .challenge_text, .coach_text{
+    gap:20px;
+
+  }
+
+  .journey_content img {
+    /* width: 100%; */
+    /* height: auto; */
     max-width: 100%;
+
+  }
+
+  .journey_content  {
+    max-width: 100%;
+    padding-top: 80px;
+  }
+
+  .build_text, .coach_text{
+    align-self: center;
   }
 
   /* --- our_class grid 單欄 --- */
@@ -636,7 +666,8 @@ header ul{
   }
 
   .our_class li {
-    max-width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   /* --- footer置中 --- */
@@ -646,8 +677,20 @@ header ul{
 }
 
 @media screen and (max-width: 430px) {
+
+
+header > img{
+    margin-left:0;
+}
+
   .introduct {
     gap: 20px;
+  }
+ .journey_content  {
+    max-width: 90%;
+    padding: 40px 0;
+    margin: 0 auto;
+    justify-content: center;
   }
 
   .journey_content .begin,
@@ -655,10 +698,12 @@ header ul{
   .journey_content .challenge,
   .journey_content .coach {
     gap: 20px;
+    max-width: 80%;
   }
 
+
   .our_class h2 {
-    font-size: calc(var(--h2_sec_title) * 0.9);
+    font-size: calc(var(--h2_sec_title) * 0.7);
   }
 
   .our_class p {
@@ -668,6 +713,11 @@ header ul{
   nav ul {
     gap: 10px;
   }
+
+  .begin, .challenge{
+    transform: translateY(0);
+  }
+
 }
 
  

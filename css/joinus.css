@@ -102,9 +102,11 @@ form{
 
 .login_page input{
     border-color:var(--text_login_color) ;
-    min-height: 24px;
+    min-height: 36px;
     border:1px solid var(--text_login_color);
     border-radius: 5px;
+
+    
 }
 
 .login_rightnow{
@@ -123,6 +125,12 @@ form{
 
 }
 
+.login_rightnow:hover{
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+
 .seperateline{
     height: 1px;
     background-color: var(--text_login_color);
@@ -133,7 +141,7 @@ form{
     justify-content: space-between;
 }
 .login_page span{
-    font-size: 14px;
+    font-size: var(--mobie_text);
 }
 
 
@@ -157,6 +165,7 @@ form{
     border: 1px solid var(--text_login_color);
     color: var(--color3);
     font-family: 'Inria Serif','Noto Serif TC',sans-serif,serif;
+    padding: 10px 0;
 
     cursor: pointer;
 
@@ -189,4 +198,31 @@ form{
 .login_page a:hover{
     font-weight: var(--font_weight_blod);
     color: var(--text_login_color);
+}
+
+
+/*     會員註冊      */
+
+.register_page{
+    display: none;
+}
+
+.register_page .row {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
+    align-items: center;
+}
+
+
+.register_page .row label,
+.register_page .row input {
+    width: 100%;
+}
+
+
+.register_page .row:has(input:only-of-type),
+.register_page .row:has(input[type="checkbox"]) {
+    grid-template-columns: 1fr;
 }

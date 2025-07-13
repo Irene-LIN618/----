@@ -7,8 +7,6 @@ footer{
     text-align: center;
     color: var(--footer_text_color);
     padding: 10px 0;
-    
-    
 }
 
 footer.img{}
@@ -61,8 +59,9 @@ footer li{
     display: block;
     background-color: var(--botton_background_color);
     color: var(--botton_text_color);
-    font-size: var(--h6_btn);
-    font-weight: var(--font-weight_blod);
+
+    font-size: 1.25rem;
+    font-weight: var(--font_weight_blod);
     border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
     text-align: center;
